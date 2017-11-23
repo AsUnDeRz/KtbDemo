@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.github.thekhaeng:pushdown-anim-click-1.0.7">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/pushdown-anim-click-1.0.7.aar/86d79b730521519a029af6a7ad3c2643/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/pushdown-anim-click-1.0.7.aar/86d79b730521519a029af6a7ad3c2643/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.thekhaeng/pushdown-anim-click/1.0.7/bb6240b7c46882d16e682de9a3cf6c43092aec4d/pushdown-anim-click-1.0.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
