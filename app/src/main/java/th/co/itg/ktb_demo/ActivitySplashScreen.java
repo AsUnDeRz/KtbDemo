@@ -6,6 +6,8 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import th.co.itg.ktb_demo.Customer.ActivityCustomerList;
+
 /**
  * Created by ToCHe on 23/11/2017 AD.
  */
@@ -21,7 +23,9 @@ public class ActivitySplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splashscreen);
 
         runnable = () -> {
-            startActivity(new Intent().setClass(ActivitySplashScreen.this,ActivityMain.class));
+            //startActivity(new Intent().setClass(ActivitySplashScreen.this,ActivityLogin.class));
+            //startActivity(new Intent().setClass(ActivitySplashScreen.this,ActivityMain.class));
+            startActivity(new Intent().setClass(ActivitySplashScreen.this,ActivityCustomerList.class));
             finish();
         };
     }

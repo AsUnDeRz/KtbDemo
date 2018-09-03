@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet_customer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <RelativeLayout
+        android:id="@+id/rootInformation"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/txtMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_alignStart="@+id/txtName"
+            android:layout_below="@+id/txtAddress"
+            android:layout_marginTop="24dp"
+            android:text="Mobile"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="false"
+            android:layout_alignStart="@+id/txtName"
+            android:layout_below="@+id/txtName"
+            android:layout_marginEnd="64dp"
+            android:layout_marginTop="24dp"
+            android:lines="2"
+            android:text="Address"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="71dp"
+            android:text="Name"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnSendOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="16dp"
+            android:background="@color/colorPrimary"
+            android:text="ส่ง OTP"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rootReceiveotp"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edtOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="false"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_edttext"
+            android:ems="10"
+            android:gravity="center_horizontal|center"
+            android:inputType="number"
+            android:maxLength="6"
+            android:text="254665"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="false"
+            android:layout_centerVertical="false"
+            android:layout_marginTop="80dp"
+            android:text="กรอกรหัส OTP"
+            android:textColor="@color/albumColorPrimaryBlack"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/edtOtp"
+            android:layout_marginTop="171dp"
+            android:text="Ref Code : g90Lxt"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnConfirmOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="16dp"
+            android:background="@color/colorPrimary"
+            android:text="ตกลง"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</LinearLayout>

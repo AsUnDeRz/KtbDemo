@@ -16,9 +16,9 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginTop="32dp"
-            android:text="สัญชาติ"
+            android:text="อัตราดอกเบี้ย"
             android:textSize="@dimen/char_small"
-            app:layout_constraintEnd_toStartOf="@+id/edtNational"
+            app:layout_constraintEnd_toStartOf="@+id/edtRate"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="ประเทศที่เกิด"
+            android:text="วงเงินกู้"
             android:textSize="@dimen/char_small"
             app:layout_constraintEnd_toEndOf="@+id/textView20"
             app:layout_constraintTop_toBottomOf="@+id/textView20" />
@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="วุฒิการศึกษา"
+            android:text="ระยะเวลาเช่าซื้อ"
             android:textSize="@dimen/char_small"
             app:layout_constraintEnd_toEndOf="@+id/textView21"
             app:layout_constraintTop_toBottomOf="@+id/textView21" />
@@ -48,18 +48,19 @@
             android:layout_marginTop="32dp"
             android:text="สถานภาพสมรส"
             android:textSize="@dimen/char_small"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="@+id/textView22"
             app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
         <EditText
-            android:id="@+id/edtNational"
+            android:id="@+id/edtRate"
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:layout_marginStart="160dp"
             android:background="@drawable/bg_edttext"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:nextFocusDown="@id/edtCountryBorn"
+            android:inputType="number"
+            android:nextFocusDown="@id/edtLoan"
             android:paddingStart="8dp"
             android:textSize="@dimen/char_small"
             app:layout_constraintBottom_toBottomOf="@+id/textView20"
@@ -68,33 +69,30 @@
             app:layout_constraintVertical_bias="0.476" />
 
         <EditText
-            android:id="@+id/edtCountryBorn"
+            android:id="@+id/edtLoan"
             android:layout_width="200dp"
             android:layout_height="40dp"
-            android:layout_marginTop="8dp"
             android:background="@drawable/bg_edttext"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:nextFocusDown="@id/edtEducation"
+            android:inputType="number"
+            android:nextFocusDown="@id/edtTerm"
             android:paddingStart="8dp"
             android:textSize="@dimen/char_small"
             app:layout_constraintBottom_toBottomOf="@+id/textView21"
-            app:layout_constraintStart_toStartOf="@+id/edtNational"
+            app:layout_constraintStart_toStartOf="@+id/edtRate"
             app:layout_constraintTop_toTopOf="@+id/textView21" />
 
         <EditText
-            android:id="@+id/edtEducation"
+            android:id="@+id/edtTerm"
             android:layout_width="200dp"
             android:layout_height="40dp"
-            android:layout_marginTop="8dp"
             android:background="@drawable/bg_edttext"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:nextFocusDown="@id/edtStatus"
+            android:inputType="number"
             android:paddingStart="8dp"
             android:textSize="@dimen/char_small"
             app:layout_constraintBottom_toBottomOf="@+id/textView22"
-            app:layout_constraintStart_toStartOf="@+id/edtCountryBorn"
+            app:layout_constraintStart_toStartOf="@+id/edtLoan"
             app:layout_constraintTop_toTopOf="@+id/textView22" />
 
         <EditText
@@ -108,8 +106,9 @@
             android:nextFocusDown="@id/edtPhone"
             android:paddingStart="8dp"
             android:textSize="@dimen/char_small"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/textView23"
-            app:layout_constraintStart_toStartOf="@+id/edtEducation"
+            app:layout_constraintStart_toStartOf="@+id/edtTerm"
             app:layout_constraintTop_toTopOf="@+id/textView23" />
 
         <android.support.v7.widget.CardView
@@ -120,7 +119,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="40dp"
-            app:cardBackgroundColor="@android:color/holo_red_light"
+            app:cardBackgroundColor="@color/colorRed"
             app:cardCornerRadius="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -142,6 +141,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="โทรศัพท์"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="@+id/textView23"
             app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
@@ -155,9 +155,47 @@
             android:inputType="textPersonName"
             android:paddingStart="8dp"
             android:textSize="@dimen/char_small"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/textView2"
             app:layout_constraintStart_toStartOf="@+id/edtStatus"
             app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="%"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/edtRate"
+            app:layout_constraintStart_toEndOf="@+id/edtRate"
+            app:layout_constraintTop_toTopOf="@+id/edtRate" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="บาท"
+            app:layout_constraintBottom_toBottomOf="@+id/edtLoan"
+            app:layout_constraintStart_toEndOf="@+id/edtLoan"
+            app:layout_constraintTop_toTopOf="@+id/edtLoan" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="งวด"
+            app:layout_constraintBottom_toBottomOf="@+id/edtTerm"
+            app:layout_constraintStart_toEndOf="@+id/edtTerm"
+            app:layout_constraintTop_toTopOf="@+id/edtTerm" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
